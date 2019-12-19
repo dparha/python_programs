@@ -5,4 +5,3 @@ user = input("Enter a string: ")
 num = int(input("Enter an integer: "))
 
 print(num * (user + " "))
-
