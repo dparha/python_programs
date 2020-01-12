@@ -17,6 +17,10 @@ def home():
         data = "hello world"
         return jsonify({'data': data})
 
+    elif(request.method) == 'POST':
+
+        return request.form
+
 # A simple funciton to calculate the square of a number
 # the number to squared is sent in the URL when we use GET
 # on the terminal type: curl http://127.0.0.1:5000/home/10
