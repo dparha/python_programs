@@ -1,4 +1,3 @@
-
 from flask import Flask, request, jsonify
 app = Flask(__name__)  # Flask constructor
 
@@ -16,9 +15,11 @@ def hello_name(name):
     if request.method == 'GET':
         return 'Hello %s!\n' % name
 
-    if request.method == 'POST':
+    elif request.method == 'POST':
         return jsonify({'name from post': request.form['name'],
                         'name from url': name})
+    else:
+        return request.statuscode(404)
 
 
 if __name__ == '__main__':
